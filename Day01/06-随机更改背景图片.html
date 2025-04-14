@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM随机更改背景图片</title>
+  <style>
+    body {
+      background: url(images/desktop_1.jpg) no-repeat top center/cover;
+    }
+  </style>
+</head>
+<body>
+<script>
+  function getRandom (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  // 随机数获取
+  const random = getRandom(1, 10)
+  document.body.style.backgroundImage = `url(images/desktop_${random}.jpg)`
+</script>
+</body>
+</html>

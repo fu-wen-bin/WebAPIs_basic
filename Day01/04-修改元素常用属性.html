@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM修改元素常用属性</title>
+</head>
+<body>
+<img src="images/1.webp" alt="">
+
+<script>
+
+  function getRandom (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  // 1. 获取元素
+  const img = document.querySelector('img')
+  // 2. 修改属性  对象.属性
+  img.src = 'images/2.webp'
+  img.title = 'FWB的照片'
+
+  // 刷新获得随机图片
+  img.src = `images/${getRandom(1, 6)}.webp`
+</script>
+</body>
+</html>
