@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>键盘事件-用户输入文本事件</title>
+</head>
+<body>
+<input type="text">
+
+<script>
+
+  const input = document.querySelector('input')
+  // 1. 键盘输入事件
+  // input.addEventListener('keyup', function (e) {
+  //   console.log('键盘弹起了')
+  // })
+  // input.addEventListener('keydown', function (e) {
+  //   console.log('键盘按下了')
+  // })
+
+  // 2. 用户输入文本事件
+  input.addEventListener('input', function () {
+    console.log('用户输入了')
+    console.log(input.value)
+  })
+</script>
+</body>
+</html>
