@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>scrollTop细节</title>
+  <style>
+    body {
+      height: 3000px
+    }
+  </style>
+</head>
+<body>
+<script>
+
+  window.addEventListener('scroll', function () {
+    // 因为要拿到最新数据，所以必须写在里面
+    const n = document.documentElement.scrollTop
+    // 得到的数据类型  --数字型 不带单位  且可以读写
+    console.log(n)
+
+  })
+</script>
+</body>
+</html>
