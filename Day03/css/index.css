@@ -1,4 +1,10 @@
 @charset "UTF-8";
+
+/**页面滑动**/
+html {
+  scroll-behavior: smooth;
+}
+
 /** 分类及焦点图 **/
 .xtx_entry {
   height: 500px;
@@ -493,7 +499,7 @@
   padding-left: 16px;
   font-size: 22px;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 }
 
 .xtx_goods_topic .meta .title small {
@@ -797,6 +803,7 @@
   opacity: 0;
   transition: all .5s;
 }
+
 .xtx-elevator .xtx-elevator-list {
   width: 60px;
   height: 300px;
@@ -805,26 +812,30 @@
   border: 1px solid #f5f5f5;
   position: relative;
 }
+
 .xtx-elevator .xtx-elevator-list li {
   height: 60px;
   padding: 15px;
 }
+
 .xtx-elevator .xtx-elevator-list li a {
   width: 30px;
   height: 30px;
   display: block;
 }
+
 .xtx-elevator .xtx-elevator-list li a:hover,
 .xtx-elevator .xtx-elevator-list li a.active {
   color: #27BA9B;
 }
+
 .xtx-elevator .xtx-elevator-list li a i {
   display: block;
   width: 16px;
   height: 16px;
   position: relative;
   left: 4px;
-  background-position: 8px -106px;  
+  background-position: 8px -106px;
   font-size: 20px;
   transform: rotate(-90deg);
 }
