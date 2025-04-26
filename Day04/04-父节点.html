@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>父节点</title>
+</head>
+<body>
+<div class="grandfather">
+  <div class="father">
+    <div class="son">x</div>
+  </div>
+</div>
+
+<script>
+  const father = document.querySelector('.father')
+  const son = document.querySelector('.son')
+  console.log(son)
+  console.log(son.parentNode) // <div class="father">...</div>
+  console.log(son.parentNode.parentNode) // <div class="grandfather">
+</script>
+</body>

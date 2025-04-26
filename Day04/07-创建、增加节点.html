@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>创建、增加节点</title>
+</head>
+<body>
+<ul>
+  <li>我是原本就有的老大</li>
+</ul>
+<script>
+  // 1. 创建节点
+  const div = document.createElement('div')
+  console.log(div)
+
+  // 2. 追加节点
+  document.body.appendChild(div) //  父元素.appendChild(子元素) --位于最后
+
+  const ul = document.querySelector('ul')
+  const li = document.createElement('li')
+  li.innerHTML = `我是新追加的`
+  ul.appendChild(li)
+
+  // 3. 插入某个元素前面
+  const li2 = document.createElement('li')
+  li2.innerHTML = `我是第二次追加--插队的li`
+  ul.children
+  ul.insertBefore(li2, ul.children[0]) // 使用查找子元素后的数组选择插入的位置
+</script>
+</body>
+</html>

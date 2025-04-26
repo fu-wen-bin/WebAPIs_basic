@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>删除节点</title>
+</head>
+<body>
+<ul>
+  <li>我没用了，把我删掉</li>
+</ul>
+<script>
+  const ul = document.querySelector('ul')
+  // 删除节点  父元素.removeChildren(子元素)  --display: none 节点仍然存在
+  ul.removeChild(ul.children[0])
+</script>
+</body>
+</html>

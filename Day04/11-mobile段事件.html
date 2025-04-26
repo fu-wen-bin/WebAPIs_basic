@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mobile端事件</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+<div></div>
+<script>
+  const div = document.querySelector('div')
+  // 1. 触摸
+  div.addEventListener('touchstart', function () {
+    console.log('开始摸我了')
+  })
+  // 2. 离开
+  div.addEventListener('touchend', function () {
+    console.log('触摸结束')
+  })
+  // 3. 移动
+  div.addEventListener('touchmove', function () {
+    console.log('一直在摸')
+  })
+</script>
+</body>
+</html>
