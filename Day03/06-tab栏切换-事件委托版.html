@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>tab栏切换</title>
+  <meta charset="UTF-8">
+  <title>事件委托版tab栏切换</title>
   <style>
     * {
       margin: 0;
@@ -74,11 +71,11 @@
   <div class="tab-nav">
     <h3>每日特价</h3>
     <ul>
-      <li><a class="active" href="javascript:;">精选</a></li>
-      <li><a href="javascript:;">美食</a></li>
-      <li><a href="javascript:;">百货</a></li>
-      <li><a href="javascript:;">个护</a></li>
-      <li><a href="javascript:;">预告</a></li>
+      <li><a class="active" href="javascript:" data-id="0">精选</a></li>
+      <li><a href="javascript:" data-id="1">美食</a></li>
+      <li><a href="javascript:" data-id="2">百货</a></li>
+      <li><a href="javascript:" data-id="3">个护</a></li>
+      <li><a href="javascript:" data-id="4">预告</a></li>
     </ul>
   </div>
   <div class="tab-content">
@@ -91,28 +88,32 @@
 </div>
 
 <script>
-  // 1. a 模块制作 --需要给 5个链接绑定鼠标经过事件
-  // 1.1 获取 a 元素
-  const as = document.querySelectorAll('.tab-nav a')
-  console.log(as)
-  // 2.  5个链接绑定鼠标经过事件
+  // 1. 使用事件委托形式 实现tab切换
+  // 1.1 获取 ul 元素  因为 ul只有一个
+  const ul = document.querySelector('.tab-nav ul')
 
-  for (let i = 0; i < as.length; i++) {
-    as[i].addEventListener('mouseenter', function () {
-      console.log('鼠标经过咯')
-      // 排他思想
-      // 干掉别人 移除 active
+  // 2. 绑定鼠标经过事件
+  ul.addEventListener('click', function (e) {
+    // 只有点击了 a 才会进行 类的添加和删除
+    // e.target 是我们点击的对象
+    // e.target.tagName 点击的对象的标签名
+    if (e.target.tagName === 'A') {
+      // 排他思想 先移除原本的 active
       document.querySelector('.tab-nav .active').classList.remove('active')
-      // 我登基，添加类 active
-      this.classList.add('active')
+      // 当前元素添加 active  --不能再使用 this 这里 this 指向 ul
+      e.target.classList.add('active')
 
-      // 五个大盒子一一对应 .item
-      // 干掉别人
+      // 下面大盒子模块
+      const id = +e.target.dataset.id
+      // 排他思想 先移除原本的 active
       document.querySelector('.tab-content .active').classList.remove('active')
-      // 对应序号的按个item 显示 添加 类
-      document.querySelector(`.tab-content .item:nth-child(${i + 1})`).classList.add('active')
-    })
-  }
+      // 当前盒子添加 active
+      document.querySelector(`.tab-content .item:nth-child(${id + 1})`).classList.add('active')
+    }
+
+  })
+
+
 </script>
 </body>
 

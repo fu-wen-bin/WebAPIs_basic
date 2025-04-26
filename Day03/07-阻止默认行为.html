@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>阻止默认行为</title>
+</head>
+<body>
+<form action="https://www.itcast.cn">
+  <input type="submit" value="免费注册">
+</form>
+<a href="https://www.baidu.coom">百度一下，你就知道</a>
+<script>
+  // 1. 阻止默认事件
+  const form = document.querySelector('form')
+  form.addEventListener('submit', function (e) {
+    // 阻止默认行为
+    e.preventDefault()
+  })
+  const a = document.querySelector('a')
+  a.addEventListener('click', function (e) {
+    e.preventDefault()
+  })
+
+</script>
+</body>
+</html>

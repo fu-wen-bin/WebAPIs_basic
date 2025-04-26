@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>鼠标经过事件的区别</title>
+  <style>
+    .dad {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+    }
+
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="dad">
+  <div class="son">
+  </div>
+</div>
+<script>
+  const dad = document.querySelector('.dad')
+  const son = document.querySelector('.son')
+  // mouseover和 mouseleave 存在冒泡影响开发性能，不要用
+  /*
+  dad.addEventListener('mouseover', function () {
+    console.log('鼠标经过')
+  })
+  dad.addEventListener('mouseout', function () {
+    console.log('鼠标离开')
+  })
+  */
+  //mouseenter 和 mouseleave 不存在冒泡推荐用
+  dad.addEventListener('mouseenter', function () {
+    console.log('鼠标经过')
+  })
+  dad.addEventListener('mouseleave', function () {
+    console.log('鼠标离开')
+  })
+
+</script>
+</body>
+</html>
