@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>本地存储</title>
+</head>
+<body>
+<script>
+  // 1. 储存一个名字，uname 傅文斌  --本地储存只能存储字符串数据类型
+  // localStorage.setItem(键,值)
+  localStorage.setItem('uname', '傅文斌')
+
+  // 2. 读取数据 localStorage.getItem(键)
+  console.log(localStorage.getItem('uname'))
+
+  // 3. 删除本地存储  只删除名字
+  localStorage.removeItem('uname')
+
+  // 4. 修改  --有则改，无则增
+  localStorage.setItem('uname','颜杨皓越')
+</script>
+</body>
+</html>
