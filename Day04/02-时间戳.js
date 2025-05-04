@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>时间戳</title>
-</head>
-<body>
-<script>
+//时间戳
   // 1.getTime() --必须要实例化 要有new
   const date=new Date();
   console.log(date.getTime())
@@ -17,6 +10,3 @@
 
   // 3. Date.now()
   console.log(Date.now())
-</script>
-</body>
-</html>
