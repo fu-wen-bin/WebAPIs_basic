@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件循环</title>
+</head>
+<body>
+<script>
+  // 先执行完主线程，查询任务队列，取出一个任务推入主线程进行处理
+  // 先同步任务，后异步任务
+  console.log(1)
+  console.log(2)
+  setTimeout(function () {
+    console.log(3)
+  })
+  console.log(4)
+</script>
+</body>
+</html>
