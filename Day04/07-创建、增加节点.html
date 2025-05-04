@@ -16,10 +16,10 @@
   // 2. 追加节点
   document.body.appendChild(div) //  父元素.appendChild(子元素) --位于最后
 
-  const ul = document.querySelector('ul')
-  const li = document.createElement('li')
+  const ul = document.querySelector('ul')  //获取需要的父元素
+  const li = document.createElement('li')  //获取创建新增的子元素
   li.innerHTML = `我是新追加的`
-  ul.appendChild(li)
+  ul.appendChild(li)   //追加子元素进父元素中
 
   // 3. 插入某个元素前面
   const li2 = document.createElement('li')
