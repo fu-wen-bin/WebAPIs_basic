@@ -5,21 +5,21 @@
   <title>history对象</title>
 </head>
 <body>
-<button>前进</button>
-<button>后退</button>
-<script>
-  const forward = document.querySelector('button:first-child')
-  const back = forward.nextElementSibling
-  back.addEventListener('click', function () {
-    // 后退一步
-    // history.back()
-    history.go(-1)
-  })
-  forward.addEventListener('click', function () {
-    // 前进一步
-    // history.forward()
-    history.go(1)
-  })
-</script>
+  <button>前进</button>
+  <button>后退</button>
+  <script>
+    const forward = document.querySelector('button:first-child')
+    const back = forward.nextElementSibling
+    back.addEventListener('click', function () {
+      // 后退一步
+      // history.back()
+      history.go(-1)
+    })
+    forward.addEventListener('click', function () {
+      // 前进一步
+      // history.forward()
+      history.go(1)
+    })
+  </script>
 </body>
 </html>

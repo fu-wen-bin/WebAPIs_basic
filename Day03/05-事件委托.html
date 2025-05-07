@@ -5,28 +5,28 @@
   <title>事件委托--相当于分发任务</title>
 </head>
 <body>
-<ul>
-  <li>第1个孩子</li>
-  <li>第2个孩子</li>
-  <li>第3个孩子</li>
-  <li>第4个孩子</li>
-  <li>第5个孩子</li>
-  <p>我不需要变色</p>
-</ul>
-<script>
-  // 减少注册次数，提高程序性能，不需要挨个进行注册
-  // 事件委托其实是利用事件冒泡的特点 -- 从子到夫
-  // 给父元素注册事件，触发子元素事件时会冒泡到父元素上，从而触发父元素事件
+  <ul>
+    <li>第1个孩子</li>
+    <li>第2个孩子</li>
+    <li>第3个孩子</li>
+    <li>第4个孩子</li>
+    <li>第5个孩子</li>
+    <p>我不需要变色</p>
+  </ul>
+  <script>
+    // 减少注册次数，提高程序性能，不需要挨个进行注册
+    // 事件委托其实是利用事件冒泡的特点 -- 从子到夫
+    // 给父元素注册事件，触发子元素事件时会冒泡到父元素上，从而触发父元素事件
 
-  // 点击每个小li 当前文字变成红色
-  // 1. 获取父元素
-  const ul = document.querySelector('ul')
-  ul.addEventListener('click', function (e) {
-    // 只有点击li才有效果
-    // 获得真正的触发元素 .target.tagName
-    if (e.target.tagName === 'LI')
-      e.target.style.color = 'red'
-  })
-</script>
+    // 点击每个小li 当前文字变成红色
+    // 1. 获取父元素
+    const ul = document.querySelector('ul')
+    ul.addEventListener('click', function (e) {
+      // 只有点击li才有效果
+      // 获得真正的触发元素 .target.tagName
+      if (e.target.tagName === 'LI')
+        e.target.style.color = 'red'
+    })
+  </script>
 </body>
 </html>

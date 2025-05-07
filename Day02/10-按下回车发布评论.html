@@ -99,60 +99,60 @@
 </head>
 
 <body>
-<div class="wrapper">
-  <i class="avatar"></i>
-  <textarea id="tx" placeholder="发一条友善的评论" rows="2" maxlength="200"></textarea>
-  <button>发布</button>
-</div>
-<div class="wrapper">
-  <span class="total">0/200字</span>
-</div>
-<div class="list">
-  <div class="item" style="display: none;">
+  <div class="wrapper">
     <i class="avatar"></i>
-    <div class="info">
-      <p class="name">清风徐来</p>
-      <p class="text">大家都辛苦啦，感谢各位大大的努力，能圆满完成真是太好了[笑哭][支持]</p>
-      <p class="time">2022-10-10 20:29:21</p>
+    <textarea id="tx" placeholder="发一条友善的评论" rows="2" maxlength="200"></textarea>
+    <button>发布</button>
+  </div>
+  <div class="wrapper">
+    <span class="total">0/200字</span>
+  </div>
+  <div class="list">
+    <div class="item" style="display: none;">
+      <i class="avatar"></i>
+      <div class="info">
+        <p class="name">清风徐来</p>
+        <p class="text">大家都辛苦啦，感谢各位大大的努力，能圆满完成真是太好了[笑哭][支持]</p>
+        <p class="time">2022-10-10 20:29:21</p>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  // 1. 当文本域获得了焦点，就让 total 展现
-  const tx = document.querySelector('#tx')
-  const tt = document.querySelector('.total')
-  const item = document.querySelector('.item')
-  const text = document.querySelector('.text')
-  tx.addEventListener('focus', function () {
-    tt.style.opacity = '1'
-  })
-  // 2. 当文本域失去了焦点，并且输入框中内容为空，就让 total 隐藏
-  tx.addEventListener('blur', function () {
-    if (tx.value === '')
-      tt.style.opacity = '0'
-  })
+  <script>
+    // 1. 当文本域获得了焦点，就让 total 展现
+    const tx = document.querySelector('#tx')
+    const tt = document.querySelector('.total')
+    const item = document.querySelector('.item')
+    const text = document.querySelector('.text')
+    tx.addEventListener('focus', function () {
+      tt.style.opacity = '1'
+    })
+    // 2. 当文本域失去了焦点，并且输入框中内容为空，就让 total 隐藏
+    tx.addEventListener('blur', function () {
+      if (tx.value === '')
+        tt.style.opacity = '0'
+    })
 
-  // 3. 输入文字统计字数
-  tx.addEventListener('input', function () {
-    tx.value.length //得到输入的长度
-    tt.innerHTML = `${tx.value.length}/200字`
-  })
-
-  // 4. 绑定键盘事件
-  tx.addEventListener('keyup', function (e) {
-    // 按下回车才会触发
-    if (e.key === 'Enter') {
-      // 如果用户输入不为空，则显示打印
-      if (tx.value.trim() !== '') {
-        item.style.display = 'block'
-        text.innerHTML = tx.value
-      }
-      // 按下回车清空文本域
-      tx.value = ''
+    // 3. 输入文字统计字数
+    tx.addEventListener('input', function () {
+      tx.value.length //得到输入的长度
       tt.innerHTML = `${tx.value.length}/200字`
-    }
-  })
-</script>
+    })
+
+    // 4. 绑定键盘事件
+    tx.addEventListener('keyup', function (e) {
+      // 按下回车才会触发
+      if (e.key === 'Enter') {
+        // 如果用户输入不为空，则显示打印
+        if (tx.value.trim() !== '') {
+          item.style.display = 'block'
+          text.innerHTML = tx.value
+        }
+        // 按下回车清空文本域
+        tx.value = ''
+        tt.innerHTML = `${tx.value.length}/200字`
+      }
+    })
+  </script>
 </body>
 
 </html>

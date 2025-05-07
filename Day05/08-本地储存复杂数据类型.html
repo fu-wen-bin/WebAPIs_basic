@@ -5,26 +5,26 @@
   <title>本地储存复杂数据类型</title>
 </head>
 <body>
-<script>
-  const obj = {
-    uname: '傅文斌',
-    age: 18,
-    gender: '男',
-  }
-  // 存储复杂数据数据类型  --无法直接使用
-  // localStorage.setItem('obj', obj)
-  // 取出数据内容
-  // console.log(localStorage.getItem('obj'))
+  <script>
+    const obj = {
+      uname: '傅文斌',
+      age: 18,
+      gender: '男',
+    }
+    // 存储复杂数据数据类型  --无法直接使用
+    // localStorage.setItem('obj', obj)
+    // 取出数据内容
+    // console.log(localStorage.getItem('obj'))
 
-  // 正确方式  --复杂数据类型必须转成JSON.stringify(obj)  JSON字符串储存
-  localStorage.setItem('obj', JSON.stringify(obj))
-  // JSON 对象 属性和值必须要有引号，而且引号必须是双引号
-  // {"uname":"傅文斌","age":18,"gender":"男"}
-  // 取出数据 console.log(typeof LocalStorage.getItem('obj'))
+    // 正确方式  --复杂数据类型必须转成JSON.stringify(obj)  JSON字符串储存
+    localStorage.setItem('obj', JSON.stringify(obj))
+    // JSON 对象 属性和值必须要有引号，而且引号必须是双引号
+    // {"uname":"傅文斌","age":18,"gender":"男"}
+    // 取出数据 console.log(typeof LocalStorage.getItem('obj'))
 
-  // 把JSON字符串转化为对象
-  const str = localStorage.getItem('obj')  //字符串类型
-  console.log(JSON.parse(str))  //JSON.parse(string) --字符串转为对象
-</script>
+    // 把JSON字符串转化为对象
+    const str = localStorage.getItem('obj')  //字符串类型
+    console.log(JSON.parse(str))  //JSON.parse(string) --字符串转为对象
+  </script>
 </body>
 </html>

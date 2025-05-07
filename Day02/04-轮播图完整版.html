@@ -87,99 +87,99 @@
   </style>
 </head>
 <body>
-<div class="slider">
-  <div class="slider-wrapper">
-    <img src="images/slider01.jpg" alt="">
-  </div>
-  <div class="slider-footer">
-    <p>来B站，过大年！</p>
-    <ul class="slider-indicator">
-      <li class="active"></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <div class="toggle">
-      <button class="prev">&lt;</button>
-      <button class="next">&gt;</button>
+  <div class="slider">
+    <div class="slider-wrapper">
+      <img src="images/slider01.jpg" alt="">
+    </div>
+    <div class="slider-footer">
+      <p>来B站，过大年！</p>
+      <ul class="slider-indicator">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="toggle">
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  function changeSlider () {
-    // 更改图片路径
-    img.src = sliderData[t].url
+  <script>
+    function changeSlider () {
+      // 更改图片路径
+      img.src = sliderData[t].url
 
-    // 更改 footer 文字内容
-    p.innerHTML = sliderData[t].title
+      // 更改 footer 文字内容
+      p.innerHTML = sliderData[t].title
 
-    //删除以前小圆点的 active
-    document.querySelector('.slider-indicator .active').classList.remove('active')
+      //删除以前小圆点的 active
+      document.querySelector('.slider-indicator .active').classList.remove('active')
 
-    // 小圆点  只让当前小圆点属性为 active
-    document.querySelector(`.slider-indicator li:nth-child(${t + 1})`).classList.add(`active`)
+      // 小圆点  只让当前小圆点属性为 active
+      document.querySelector(`.slider-indicator li:nth-child(${t + 1})`).classList.add(`active`)
 
-  }
+    }
 
-  // 1. 初始数据
-  const sliderData = [
-    { url: './images/slider01.jpg', title: '来B站，过大年！', color: 'rgb(100, 67, 68)' },
-    { url: './images/slider02.jpg', title: '开启剑与雪的黑暗传说！', color: 'rgb(43, 35, 26)' },
-    { url: './images/slider03.jpg', title: '对人类来说会不会太超前了？', color: 'rgb(36, 31, 33)' },
-    { url: './images/slider04.jpg', title: '真正的jo厨出现了！', color: 'rgb(139, 98, 66)' },
-    { url: './images/slider05.jpg', title: '李玉刚：让世界通过B站看到东方大国文化', color: 'rgb(67, 90, 92)' },
-    { url: './images/slider06.jpg', title: '快来分享你的寒假日常吧~', color: 'rgb(166, 131, 143)' },
-    { url: './images/slider07.jpg', title: '哔哩哔哩小年YEAH', color: 'rgb(53, 29, 25)' },
-    { url: './images/slider08.jpg', title: '一站式解决你的电脑配置问题！！！', color: 'rgb(99, 72, 114)' },
-  ]
+    // 1. 初始数据
+    const sliderData = [
+      { url: './images/slider01.jpg', title: '来B站，过大年！', color: 'rgb(100, 67, 68)' },
+      { url: './images/slider02.jpg', title: '开启剑与雪的黑暗传说！', color: 'rgb(43, 35, 26)' },
+      { url: './images/slider03.jpg', title: '对人类来说会不会太超前了？', color: 'rgb(36, 31, 33)' },
+      { url: './images/slider04.jpg', title: '真正的jo厨出现了！', color: 'rgb(139, 98, 66)' },
+      { url: './images/slider05.jpg', title: '李玉刚：让世界通过B站看到东方大国文化', color: 'rgb(67, 90, 92)' },
+      { url: './images/slider06.jpg', title: '快来分享你的寒假日常吧~', color: 'rgb(166, 131, 143)' },
+      { url: './images/slider07.jpg', title: '哔哩哔哩小年YEAH', color: 'rgb(53, 29, 25)' },
+      { url: './images/slider08.jpg', title: '一站式解决你的电脑配置问题！！！', color: 'rgb(99, 72, 114)' },
+    ]
 
-  // 2. 获取元素
-  const img = document.querySelector('.slider-wrapper img')
-  const p = document.querySelector('.slider-footer p')
-  const prev = document.querySelector('.slider-footer .toggle .prev')
-  const next = document.querySelector('.slider-footer .toggle .next')
-  const slider = document.querySelector('.slider')
-  let t = 0 // 信号量 控制图片播放张数
+    // 2. 获取元素
+    const img = document.querySelector('.slider-wrapper img')
+    const p = document.querySelector('.slider-footer p')
+    const prev = document.querySelector('.slider-footer .toggle .prev')
+    const next = document.querySelector('.slider-footer .toggle .next')
+    const slider = document.querySelector('.slider')
+    let t = 0 // 信号量 控制图片播放张数
 
-  // 3. 点击按钮切换轮图
-  // 3.1 获取左侧按钮进行操作
-  prev.addEventListener('click', function () {
-    t--
-    t = t < 0 ? sliderData.length - 1 : t
-    // 调用公共函数
-    changeSlider()
-  })
-  // 3.2 获取右侧按钮进行操作
-  next.addEventListener('click', function () {
-    t++
-    t = t >= sliderData.length ? 0 : t
-    // 调用公共函数
-    changeSlider()
-  })
+    // 3. 点击按钮切换轮图
+    // 3.1 获取左侧按钮进行操作
+    prev.addEventListener('click', function () {
+      t--
+      t = t < 0 ? sliderData.length - 1 : t
+      // 调用公共函数
+      changeSlider()
+    })
+    // 3.2 获取右侧按钮进行操作
+    next.addEventListener('click', function () {
+      t++
+      t = t >= sliderData.length ? 0 : t
+      // 调用公共函数
+      changeSlider()
+    })
 
-  // 4. 鼠标进入slider，关闭定时器
-  slider.addEventListener('mouseenter', function () {
-    clearInterval(timeID)
-  })
+    // 4. 鼠标进入slider，关闭定时器
+    slider.addEventListener('mouseenter', function () {
+      clearInterval(timeID)
+    })
 
-  // 5. 鼠标离开，开启定时器
-  slider.addEventListener('mouseleave', function () {
-    clearInterval(timeID)
-    timeID = setInterval(function () {
+    // 5. 鼠标离开，开启定时器
+    slider.addEventListener('mouseleave', function () {
+      clearInterval(timeID)
+      timeID = setInterval(function () {
+        // 利用js自动调用点击事件  click()必须加小括号
+        next.click()
+      }, 1000)
+    })
+
+    let timeID = setInterval(function () {
       // 利用js自动调用点击事件  click()必须加小括号
       next.click()
     }, 1000)
-  })
 
-  let timeID = setInterval(function () {
-    // 利用js自动调用点击事件  click()必须加小括号
-    next.click()
-  }, 1000)
-
-</script>
+  </script>
 </body>
 </html>

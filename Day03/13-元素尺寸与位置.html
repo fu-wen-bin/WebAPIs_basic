@@ -22,18 +22,18 @@
   </style>
 </head>
 <body>
-<div>
-  <p></p>
-</div>
-<script>
-  const div = document.querySelector('div')
-  // offsetLeft offsetTop 检测盒子的位置，最近一级带有定位的祖先元素
-  // offsetWidth offsetHeight 测量元素本身的宽高，包含各种边距和边框
-  // offset家族都是  只读  属性！！
-  console.log('offsetLeft:' + div.offsetLeft)
-  console.log('offsetWidth:' + div.offsetWidth)
-  const p = document.querySelector('p')
-  console.log('offsetTop:' + p.offsetLeft)
-</script>
+  <div>
+    <p></p>
+  </div>
+  <script>
+    const div = document.querySelector('div')
+    // offsetLeft offsetTop 检测盒子的位置，最近一级带有定位的祖先元素
+    // offsetWidth offsetHeight 测量元素本身的宽高，包含各种边距和边框
+    // offset家族都是  只读  属性！！
+    console.log('offsetLeft:' + div.offsetLeft)
+    console.log('offsetWidth:' + div.offsetWidth)
+    const p = document.querySelector('p')
+    console.log('offsetTop:' + p.offsetLeft)
+  </script>
 </body>
 </html>

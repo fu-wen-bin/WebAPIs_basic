@@ -5,17 +5,17 @@
   <title>克隆节点</title>
 </head>
 <body>
-<ul>
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-</ul>
-<script>
-  const ul = document.querySelector('ul')
-  // 1. 克隆节点  元素.cloneNode(布尔值)   --深拷贝全复制过去(true) / 浅拷贝只复制标签(false)
-  const li1 = ul.children[0].cloneNode(true)
-  // 2. 追加节点
-  ul.appendChild(li1)
-</script>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    const ul = document.querySelector('ul')
+    // 1. 克隆节点  元素.cloneNode(布尔值)   --深拷贝全复制过去(true) / 浅拷贝只复制标签(false)
+    const li1 = ul.children[0].cloneNode(true)
+    // 2. 追加节点
+    ul.appendChild(li1)
+  </script>
 </body>
 </html>

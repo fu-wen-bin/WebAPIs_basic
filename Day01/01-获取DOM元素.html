@@ -11,40 +11,40 @@
   </style>
 </head>
 <body>
-<div class="box">123</div>
-<div class="box">abc</div>
-<p id="nav">导航栏</p>
-<ul class="nav">
-  <li>测试1</li>
-  <li>测试2</li>
-  <li>测试3</li>
-</ul>
+  <div class="box">123</div>
+  <div class="box">abc</div>
+  <p id="nav">导航栏</p>
+  <ul class="nav">
+    <li>测试1</li>
+    <li>测试2</li>
+    <li>测试3</li>
+  </ul>
 
-<script>
+  <script>
 
-  // 1. 获取匹配的第一个元素  -- document.querySelector('')
-  const box = document.querySelector('div')
-  //const box = document.querySelector('.box')
-  console.log(box)
-  const nav = document.querySelector('#nav')
+    // 1. 获取匹配的第一个元素  -- document.querySelector('')
+    const box = document.querySelector('div')
+    //const box = document.querySelector('.box')
+    console.log(box)
+    const nav = document.querySelector('#nav')
 
-  // 直接对获取的单个元素进行修改
-  nav.style.color = 'red'
-  console.log(nav)
+    // 直接对获取的单个元素进行修改
+    nav.style.color = 'red'
+    console.log(nav)
 
-  // 获取第一个 ul 中的 li
-  const li = document.querySelector('ul li:first-child')
-  console.log(li)
+    // 获取第一个 ul 中的 li
+    const li = document.querySelector('ul li:first-child')
+    console.log(li)
 
-  // 2. 获取多个匹配的元素  -- document.querySelectorAll('')
-  const lis = document.querySelectorAll('ul li')
-  console.log(lis)
+    // 2. 获取多个匹配的元素  -- document.querySelectorAll('')
+    const lis = document.querySelectorAll('ul li')
+    console.log(lis)
 
-  // 3. 对获取的多个元素进行修改  需要用循环遍历  因为是伪数组 --有长度有索引号 无 pop push各种方法
-  const lis2 = document.querySelectorAll('ul li')
-  for (let i = 0; i < lis.length; i++) {
-    lis[i].style.color = 'blue'
-  }
-</script>
+    // 3. 对获取的多个元素进行修改  需要用循环遍历  因为是伪数组 --有长度有索引号 无 pop push各种方法
+    const lis2 = document.querySelectorAll('ul li')
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].style.color = 'blue'
+    }
+  </script>
 </body>
 </html>

@@ -18,37 +18,37 @@
   </style>
 </head>
 <body>
-<div class="father">
-  <div class="son"></div>
-</div>
-<script>
-  const father = document.querySelector('.father')
-  const son = document.querySelector('.son')
+  <div class="father">
+    <div class="son"></div>
+  </div>
+  <script>
+    const father = document.querySelector('.father')
+    const son = document.querySelector('.son')
 
-  // 事件流：事件完整执行过程中的流动路径
+    // 事件流：事件完整执行过程中的流动路径
 
-  // DOM.addEventListener('事件',函数体,捕获真或假)
+    // DOM.addEventListener('事件',函数体,捕获真或假)
 
-  // 江西 南昌 大学  目标（傅文斌） --捕获阶段  父到子
-  // 大学 南昌 江西   --冒泡阶段  子到父
+    // 江西 南昌 大学  目标（傅文斌） --捕获阶段  父到子
+    // 大学 南昌 江西   --冒泡阶段  子到父
 
-  document.addEventListener('click', function () {
-    alert('我是爷爷')
-  })
-  father.addEventListener('click', function () {
-    alert('我是爸爸')
+    document.addEventListener('click', function () {
+      alert('我是爷爷')
+    })
+    father.addEventListener('click', function () {
+      alert('我是爸爸')
 
-  })
-  son.addEventListener('click', function (e) {
-    alert('我是儿子')
+    })
+    son.addEventListener('click', function (e) {
+      alert('我是儿子')
+      // 阻止冒泡
+      // DOM.stopPropagation(father)
+      e.stopPropagation()
+    })
+
     // 阻止冒泡
     // DOM.stopPropagation(father)
-    e.stopPropagation()
-  })
 
-  // 阻止冒泡
-  // DOM.stopPropagation(father)
-
-</script>
+  </script>
 </body>
 </html>

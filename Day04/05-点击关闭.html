@@ -35,35 +35,35 @@
 </head>
 
 <body>
-<div class="box">
-  我是广告
-  <div class="box1">X</div>
-</div>
-<div class="box">
-  我是广告
-  <div class="box1">X</div>
-</div>
-<div class="box">
-  我是广告
-  <div class="box1">X</div>
-</div>
-<script>
-  // // 1. 获取事件源
-  // const box1 = document.querySelector('.box1')
-  // // 2. 事件侦听
-  // box1.addEventListener('click', function () {
-  //   this.parentNode.style.display = 'none'
-  // })
+  <div class="box">
+    我是广告
+    <div class="box1">X</div>
+  </div>
+  <div class="box">
+    我是广告
+    <div class="box1">X</div>
+  </div>
+  <div class="box">
+    我是广告
+    <div class="box1">X</div>
+  </div>
+  <script>
+    // // 1. 获取事件源
+    // const box1 = document.querySelector('.box1')
+    // // 2. 事件侦听
+    // box1.addEventListener('click', function () {
+    //   this.parentNode.style.display = 'none'
+    // })
 
-  // 1. 获取三个关闭按钮
-  const closeBtn = document.querySelectorAll('.box1')
-  for (let i = 0; i < closeBtn.length; i++) {
-    closeBtn[i].addEventListener('click', function () {
-      // 关闭我的爸爸 所以只关闭当前的父元素
-      this.parentNode.style.display = 'none'
-    })
-  }
-</script>
+    // 1. 获取三个关闭按钮
+    const closeBtn = document.querySelectorAll('.box1')
+    for (let i = 0; i < closeBtn.length; i++) {
+      closeBtn[i].addEventListener('click', function () {
+        // 关闭我的爸爸 所以只关闭当前的父元素
+        this.parentNode.style.display = 'none'
+      })
+    }
+  </script>
 </body>
 
 </html>

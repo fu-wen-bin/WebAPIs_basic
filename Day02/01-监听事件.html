@@ -31,32 +31,32 @@
   </style>
 </head>
 <body>
-<button>点击</button>
+  <button>点击</button>
 
-<div class="box">
-  我是广告
-  <div class="box1">
-    X
+  <div class="box">
+    我是广告
+    <div class="box1">
+      X
+    </div>
   </div>
-</div>
-<script>
-  // 1. 需求:点击了按钮弹出一个对话框
-  // 2. 事件源  按钮    -- 变量.addEventListener
-  // 3. 事件类型  点击鼠标
-  const btn = document.querySelector('button')
-  btn.addEventListener('click', function () {
-    alert('你好呀')
-  })
+  <script>
+    // 1. 需求:点击了按钮弹出一个对话框
+    // 2. 事件源  按钮    -- 变量.addEventListener
+    // 3. 事件类型  点击鼠标
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      alert('你好呀')
+    })
 
-  // 关闭广告案例
-  // 1. 获取事件源
-  const box = document.querySelector('.box')
-  const box1 = document.querySelector('.box1')
+    // 关闭广告案例
+    // 1. 获取事件源
+    const box = document.querySelector('.box')
+    const box1 = document.querySelector('.box1')
 
-  // 3. 事件监听  --鼠标点击关闭大盒子
-  box1.addEventListener('click', function () {
-    box.style.display = 'none'
-  })
-</script>
+    // 3. 事件监听  --鼠标点击关闭大盒子
+    box1.addEventListener('click', function () {
+      box.style.display = 'none'
+    })
+  </script>
 </body>
 </html>

@@ -12,21 +12,21 @@
   </style>
 </head>
 <body>
-<div></div>
-<script>
-  const div = document.querySelector('div')
-  // 1. 触摸
-  div.addEventListener('touchstart', function () {
-    console.log('开始摸我了')
-  })
-  // 2. 离开
-  div.addEventListener('touchend', function () {
-    console.log('触摸结束')
-  })
-  // 3. 移动
-  div.addEventListener('touchmove', function () {
-    console.log('一直在摸')
-  })
-</script>
+  <div></div>
+  <script>
+    const div = document.querySelector('div')
+    // 1. 触摸
+    div.addEventListener('touchstart', function () {
+      console.log('开始摸我了')
+    })
+    // 2. 离开
+    div.addEventListener('touchend', function () {
+      console.log('触摸结束')
+    })
+    // 3. 移动
+    div.addEventListener('touchmove', function () {
+      console.log('一直在摸')
+    })
+  </script>
 </body>
 </html>

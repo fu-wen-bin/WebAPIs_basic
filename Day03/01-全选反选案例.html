@@ -40,63 +40,63 @@
 </head>
 
 <body>
-<table>
-  <tr>
-    <th class="allCheck">
-      <input type="checkbox" name="" id="checkAll"> <span class="all">全选</span>
-    </th>
-    <th>商品</th>
-    <th>商家</th>
-    <th>价格</th>
-  </tr>
-  <tr>
-    <td>
-      <input type="checkbox" name="check" class="ck">
-    </td>
-    <td>小米手机</td>
-    <td>小米</td>
-    <td>￥1999</td>
-  </tr>
-  <tr>
-    <td>
-      <input type="checkbox" name="check" class="ck">
-    </td>
-    <td>小米净水器</td>
-    <td>小米</td>
-    <td>￥4999</td>
-  </tr>
-  <tr>
-    <td>
-      <input type="checkbox" name="check" class="ck">
-    </td>
-    <td>小米电视</td>
-    <td>小米</td>
-    <td>￥5999</td>
-  </tr>
-</table>
-<script>
-  // 1. 获取大复选框
-  const checkAll = document.querySelector('#checkAll')
-  // 2. 获取所有小的复选框
-  const cks = document.querySelectorAll('.ck')
-  // 3. 点击大复选框，注册事件
-  checkAll.addEventListener('click', function () {
-    // 得到当前的选中状态
-    // 4. 遍历小复选框  让小复选框的 checked = 大复选框的 checked
-    for (let i = 0; i < cks.length; i++) {
-      cks[i].checked = checkAll.checked
-    }
-  })
-  // 4.点击小按钮，添加事件  --小复选框控制大复选框
-  for (let i = 0; i < cks.length; i++) {
-    cks[i].addEventListener('click', function () {
-      // 判断选中的小复选框个数  是否等于总共的小复选框的个数
-      //console.log(document.querySelectorAll('.ck:checked').length)
-      checkAll.checked = document.querySelectorAll('.ck:checked').length === cks.length
-
+  <table>
+    <tr>
+      <th class="allCheck">
+        <input type="checkbox" name="" id="checkAll"> <span class="all">全选</span>
+      </th>
+      <th>商品</th>
+      <th>商家</th>
+      <th>价格</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="check" class="ck">
+      </td>
+      <td>小米手机</td>
+      <td>小米</td>
+      <td>￥1999</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="check" class="ck">
+      </td>
+      <td>小米净水器</td>
+      <td>小米</td>
+      <td>￥4999</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="check" class="ck">
+      </td>
+      <td>小米电视</td>
+      <td>小米</td>
+      <td>￥5999</td>
+    </tr>
+  </table>
+  <script>
+    // 1. 获取大复选框
+    const checkAll = document.querySelector('#checkAll')
+    // 2. 获取所有小的复选框
+    const cks = document.querySelectorAll('.ck')
+    // 3. 点击大复选框，注册事件
+    checkAll.addEventListener('click', function () {
+      // 得到当前的选中状态
+      // 4. 遍历小复选框  让小复选框的 checked = 大复选框的 checked
+      for (let i = 0; i < cks.length; i++) {
+        cks[i].checked = checkAll.checked
+      }
     })
-  }
-</script>
+    // 4.点击小按钮，添加事件  --小复选框控制大复选框
+    for (let i = 0; i < cks.length; i++) {
+      cks[i].addEventListener('click', function () {
+        // 判断选中的小复选框个数  是否等于总共的小复选框的个数
+        //console.log(document.querySelectorAll('.ck:checked').length)
+        checkAll.checked = document.querySelectorAll('.ck:checked').length === cks.length
+
+      })
+    }
+  </script>
 </body>
 
 </html>

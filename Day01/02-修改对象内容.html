@@ -5,22 +5,22 @@
   <title>DOM修改对象内容</title>
 </head>
 <body>
-<div class="box1">我是文字内容</div>
-<div class="box2">我是文字内容</div>
-<script>
-  // 1. 获取元素对象
-  const box1 = document.querySelector('.box1')
-  const box2 = document.querySelector('.box2')
+  <div class="box1">我是文字内容</div>
+  <div class="box2">我是文字内容</div>
+  <script>
+    // 1. 获取元素对象
+    const box1 = document.querySelector('.box1')
+    const box2 = document.querySelector('.box2')
 
-  // 2. 修改对象文字属性
-  console.log(box1.innerText) // 获取文字内容
-  // box.innerText = '我是一个盒子'  //修改文字内容
-  box1.innerText = '<strong>我是一个加粗盒子</strong>' //修改文字，不解析标签，无法内嵌HTML标签
+    // 2. 修改对象文字属性
+    console.log(box1.innerText) // 获取文字内容
+    // box.innerText = '我是一个盒子'  //修改文字内容
+    box1.innerText = '<strong>我是一个加粗盒子</strong>' //修改文字，不解析标签，无法内嵌HTML标签
 
-  // box.innerHTML 可以修改内容并且解析内嵌 HTML 标签
-  box2.innerHTML = '<strong>我是识别标签的加粗文字盒子</strong>' //修改文字，可以解析标签，内嵌HTML标签
+    // box.innerHTML 可以修改内容并且解析内嵌 HTML 标签
+    box2.innerHTML = '<strong>我是识别标签的加粗文字盒子</strong>' //修改文字，可以解析标签，内嵌HTML标签
 
-</script>
+  </script>
 
 </body>
 </html>

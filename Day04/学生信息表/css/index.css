@@ -5,57 +5,67 @@
 
 a {
   text-decoration: none;
-  color:#721c24;
+  color: #721c24;
 }
+
 h1 {
   text-align: center;
-  color:#333;
+  color: #333;
   margin: 20px 0;
- 
+
 }
+
 table {
-  margin:0 auto;
+  margin: 0 auto;
   width: 800px;
   border-collapse: collapse;
-  color:#004085;
+  color: #004085;
 }
+
 th {
   padding: 10px;
   background: #cfe5ff;
-  
+
   font-size: 20px;
   font-weight: 400;
 }
-td,th {
-  border:1px solid #b8daff;
+
+td, th {
+  border: 1px solid #b8daff;
 }
+
 td {
-  padding:10px;
-  color:#666;
+  padding: 10px;
+  color: #666;
   text-align: center;
   font-size: 16px;
 }
+
 tbody tr {
   background: #fff;
 }
+
 tbody tr:hover {
   background: #e1ecf8;
 }
+
 .info {
   width: 900px;
   margin: 50px auto;
   text-align: center;
 }
-.info  input, .info select {
+
+.info input, .info select {
   width: 80px;
   height: 27px;
   outline: none;
   border-radius: 5px;
-  border:1px solid #b8daff;
+  border: 1px solid #b8daff;
   padding-left: 5px;
   box-sizing: border-box;
   margin-right: 15px;
 }
+
 .info button {
   width: 60px;
   height: 27px;
@@ -66,6 +76,7 @@ tbody tr:hover {
   cursor: pointer;
   border-radius: 5px;
 }
+
 .info .age {
   width: 50px;
 }

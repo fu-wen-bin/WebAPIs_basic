@@ -65,37 +65,37 @@
 </head>
 
 <body>
-<div class="mi">
-  <input type="search" placeholder="小米笔记本">
-  <ul class="result-list">
-    <li><a href="#">全部商品</a></li>
-    <li><a href="#">小米11</a></li>
-    <li><a href="#">小米10S</a></li>
-    <li><a href="#">小米笔记本</a></li>
-    <li><a href="#">小米手机</a></li>
-    <li><a href="#">黑鲨4</a></li>
-    <li><a href="#">空调</a></li>
-  </ul>
-</div>
-<script>
-  // 1. 获取元素
-  const input = document.querySelector('[type=search]')
-  const list = document.querySelector('.result-list')
+  <div class="mi">
+    <input type="search" placeholder="小米笔记本">
+    <ul class="result-list">
+      <li><a href="#">全部商品</a></li>
+      <li><a href="#">小米11</a></li>
+      <li><a href="#">小米10S</a></li>
+      <li><a href="#">小米笔记本</a></li>
+      <li><a href="#">小米手机</a></li>
+      <li><a href="#">黑鲨4</a></li>
+      <li><a href="#">空调</a></li>
+    </ul>
+  </div>
+  <script>
+    // 1. 获取元素
+    const input = document.querySelector('[type=search]')
+    const list = document.querySelector('.result-list')
 
-  // 2.操作聚焦事件
-  input.addEventListener('focus', function () {
-    list.style.display = 'block'
-    input.classList.add('search')
-  })
+    // 2.操作聚焦事件
+    input.addEventListener('focus', function () {
+      list.style.display = 'block'
+      input.classList.add('search')
+    })
 
-  // 2.操作失焦事件
-  input.addEventListener('blur', function () {
-    input.classList.remove('search')
-    list.style.display = 'none'
-  })
+    // 2.操作失焦事件
+    input.addEventListener('blur', function () {
+      input.classList.remove('search')
+      list.style.display = 'none'
+    })
 
 
-</script>
+  </script>
 </body>
 
 </html>

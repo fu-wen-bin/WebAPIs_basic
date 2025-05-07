@@ -5,34 +5,34 @@
   <title>DOM修改表单属性</title>
 </head>
 <body>
-<!--<input type="text" value="电脑"/>-->
-<input type="checkbox" name="" id="">
-<button>点击</button>
-<script>
+  <!--<input type="text" value="电脑"/>-->
+  <input type="checkbox" name="" id="">
+  <button>点击</button>
+  <script>
 
-  // 1. 获取元素
-  const uname = document.querySelector('input')
+    // 1. 获取元素
+    const uname = document.querySelector('input')
 
-  // 2. 获取值  获取表单里面的值 用的  表单.value
-  // console.log(uname.value)  //电脑
-  // console.log(uname.innerHTML)  //innerHTML无法获取表单中的信息
+    // 2. 获取值  获取表单里面的值 用的  表单.value
+    // console.log(uname.value)  //电脑
+    // console.log(uname.innerHTML)  //innerHTML无法获取表单中的信息
 
-  uname.value = '我要买电脑'
-  // uname.type = 'text'
-  // uname.type = 'password'  //修改为密码类型，隐藏输入
+    uname.value = '我要买电脑'
+    // uname.type = 'text'
+    // uname.type = 'password'  //修改为密码类型，隐藏输入
 
-  // 复选框操作
-  const ipt = document.querySelector('input')
-  console.log(ipt.checked) //查看选取状态
-  ipt.checked = true
-  //不提倡，有隐式转换 -- 'false' 也能 true
-  ipt.checked = 'true'
+    // 复选框操作
+    const ipt = document.querySelector('input')
+    console.log(ipt.checked) //查看选取状态
+    ipt.checked = true
+    //不提倡，有隐式转换 -- 'false' 也能 true
+    ipt.checked = 'true'
 
-  // 获取button
-  const button = document.querySelector('button')
-  console.log(button.disabled) //默认false  不禁用
-  button.disabled = true
-</script>
+    // 获取button
+    const button = document.querySelector('button')
+    console.log(button.disabled) //默认false  不禁用
+    button.disabled = true
+  </script>
 
 </body>
 </html>

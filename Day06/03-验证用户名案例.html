@@ -29,26 +29,26 @@
 </head>
 
 <body>
-<input type="text">
-<span></span>
+  <input type="text">
+  <span></span>
 
-<script>
-  const reg = /^[a-zA-Z-0-9-_]{6,16}$/
-  const input = document.querySelector('input')
-  const span = document.querySelector('span')
-  input.addEventListener('blur', function () {
-    console.log(reg.test(input.value))
-    if (reg.test(this.value)) {
+  <script>
+    const reg = /^[a-zA-Z-0-9-_]{6,16}$/
+    const input = document.querySelector('input')
+    const span = document.querySelector('span')
+    input.addEventListener('blur', function () {
+      console.log(reg.test(input.value))
+      if (reg.test(this.value)) {
 
-      span.innerText = '输入合法'
-      span.className = 'right'
-    } else {
-      span.innerHTML = '请输入符合规则的名称'
-      span.className = 'error'
-    }
-  })
+        span.innerText = '输入合法'
+        span.className = 'right'
+      } else {
+        span.innerHTML = '请输入符合规则的名称'
+        span.className = 'error'
+      }
+    })
 
-</script>
+  </script>
 </body>
 
 </html>

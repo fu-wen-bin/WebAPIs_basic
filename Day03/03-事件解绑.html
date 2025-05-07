@@ -5,24 +5,24 @@
   <title>事件解绑</title>
 </head>
 <body>
-<button>点击</button>
-<script>
-  const button = document.querySelector('button')
-  // button.onclick = function () {
-  //   alert('点击了')
-  //   // L0 事件移除解绑
-  //   button.onclick = null
-  // }
+  <button>点击</button>
+  <script>
+    const button = document.querySelector('button')
+    // button.onclick = function () {
+    //   alert('点击了')
+    //   // L0 事件移除解绑
+    //   button.onclick = null
+    // }
 
-  /*
-  button.addEventListener('click', function () {  //匿名函数不能被解绑
-    alert('点击了')
-  })
-  */
-  // L2 事件移除解绑
-  button.addEventListener('click', fn)
-  button.removeEventListener('click', fn)
+    /*
+    button.addEventListener('click', function () {  //匿名函数不能被解绑
+      alert('点击了')
+    })
+    */
+    // L2 事件移除解绑
+    button.addEventListener('click', fn)
+    button.removeEventListener('click', fn)
 
-</script>
+  </script>
 </body>
 </html>
