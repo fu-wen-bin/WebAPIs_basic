@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>小兔鲜儿 - 新鲜 惠民 快捷!</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/login.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="webkit" name="renderer">
+  <link href="./favicon.ico" rel="shortcut icon">
+  <link href="./css/common.css" rel="stylesheet">
+  <link href="./css/login.css" rel="stylesheet">
+  <link href="https://at.alicdn.com/t/font_2143783_iq6z4ey5vu.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
       <form action="" autocomplete="off">
         <div class="box">
           <div class="tab-nav">
-            <a href="javascript:;" class="active" data-id="0">账户登录</a>
-            <a href="javascript:;" data-id="1">二维码登录</a>
+            <a class="active" data-id="0" href="javascript:;">账户登录</a>
+            <a data-id="1" href="javascript:;">二维码登录</a>
           </div>
           <div class="tab-pane">
             <div class="link">
@@ -33,28 +33,28 @@
             </div>
             <div class="input">
               <span class="iconfont icon-zhanghao"></span>
-              <input required type="text" placeholder="请输入用户名称/手机号码" name="username">
+              <input name="username" placeholder="请输入用户名称/手机号码" required type="text">
             </div>
             <div class="input">
               <span class="iconfont icon-suo"></span>
-              <input required type="password" placeholder="请输入密码" name="password">
+              <input name="password" placeholder="请输入密码" required type="password">
             </div>
             <div class="agree">
               <label for="my-checkbox">
-                <input type="checkbox" value="1" id="my-checkbox" class="remember" name="agree">
+                <input class="remember" id="my-checkbox" name="agree" type="checkbox" value="1">
                 <span class="iconfont icon-xuanze"></span>
               </label>
               我已同意 <a href="javascript:;">《服务条款》</a> 和 <a href="javascript:;">《服务条款》</a>
             </div>
             <div class="button clearfix">
-              <button type="submit" class="dl">登 录</button>
+              <button class="dl" type="submit">登 录</button>
               <!-- <a class="dl" href="./center.html">登 录</a> -->
               <a class="fl" href="./forget.html">忘记密码？</a>
               <a class="fr" href="./register.html">免费注册</a>
             </div>
           </div>
           <div class="tab-pane" style="display: none;">
-            <img class="code" src="./images/code.png" alt="">
+            <img alt="" class="code" src="./images/code.png">
           </div>
         </div>
       </form>
